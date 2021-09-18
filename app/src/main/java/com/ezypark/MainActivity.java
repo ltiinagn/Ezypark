@@ -1,6 +1,7 @@
 package com.ezypark;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -14,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.appcompat.widget.Toolbar;
 
 import android.util.Log;
@@ -21,6 +23,9 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.FileInputStream;
@@ -43,33 +48,84 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
+        AppCompatAutoCompleteTextView searchCarparks = (AppCompatAutoCompleteTextView) findViewById(R.id.autocomplete);
+        String[] carparks = getResources().getStringArray(R.array.carparks);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, carparks);
+        searchCarparks.setAdapter(adapter);
 
-        TextView available_lots = (TextView)findViewById(R.id.available_lots);
-
-        // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://ezypark-49e23-default-rtdb.asia-southeast1.firebasedatabase.app/");
         DatabaseReference reference = database.getReference();
-        DatabaseReference referenceAvailableLots = reference.child("carparks").child("Century Square").child("available_lots");
 
-        // referenceAvailableLots.setValue(2);
+        TextView total_lots = (TextView)findViewById(R.id.total_lots);
+        TextView available_lots = (TextView)findViewById(R.id.available_lots);
+        TextView waiting_cars = (TextView)findViewById(R.id.waiting_cars);
+        Button view_carpark = (Button)findViewById(R.id.view_carpark_button);
 
-        // Read from the database
-        referenceAvailableLots.addValueEventListener(new ValueEventListener() {
+        searchCarparks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                Integer value = dataSnapshot.getValue(Integer.class);
-                Log.d("Test", "Value is: " + value);
-                available_lots.setText("Available Lots: "+value);
-            }
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String carpark = searchCarparks.getText().toString();
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("Test", "Failed to read value.", error.toException());
+                DatabaseReference referenceCarpark = reference.child("carparks").child(carpark);
+                DatabaseReference referenceTotalLots = referenceCarpark.child("total_lots");
+                DatabaseReference referenceAvailableLots = referenceCarpark.child("available_lots");
+                DatabaseReference referenceWaitingCars = referenceCarpark.child("waiting_cars");
+
+                // Read from the database
+                referenceTotalLots.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        Integer value = dataSnapshot.getValue(Integer.class);
+                        total_lots.setText("Total Lots: "+value);
+                        total_lots.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+                        Log.w("Test", "Failed to read value.", error.toException());
+                    }
+                });
+
+                referenceAvailableLots.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        Integer value = dataSnapshot.getValue(Integer.class);
+                        available_lots.setText("Available Lots: "+value);
+                        available_lots.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+                        Log.w("Test", "Failed to read value.", error.toException());
+                    }
+                });
+
+                referenceWaitingCars.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        Integer value = dataSnapshot.getValue(Integer.class);
+                        waiting_cars.setText("Waiting Cars: "+value);
+                        waiting_cars.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+                        Log.w("Test", "Failed to read value.", error.toException());
+                    }
+                });
+
+                view_carpark.setVisibility(View.VISIBLE);
             }
         });
+
+        view_carpark.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, Carpark.class);
+                startActivity(myIntent);
+            }
+        });
+
+        // referenceAvailableLots.setValue(2);
     }
 
     @Override

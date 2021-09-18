@@ -9,7 +9,15 @@
 
     <string name="search_hint">Search for Carpark..</string>
     <string name="carpark_name">Century Square</string>
+    <string name="total_lots">Total Lots: -1</string>
     <string name="available_lots">Available Lots: -1</string>
+    <string name="waiting_cars">Waiting Cars: -1</string>
+    <string name="view_carpark">View Carpark</string>
 
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string-array name="carparks">
+        <item>Century Square</item>
+        <item>Tampines One</item>
+    </string-array>
 </resources>
