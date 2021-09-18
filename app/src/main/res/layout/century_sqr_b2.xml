@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/century_sqr_floor_tabs" />
+
     <Button
         android:id="@+id/lot5"
         android:layout_width="140dp"
@@ -175,6 +177,34 @@
         tools:layout_editor_absoluteY="172dp" />
 
     <Button
+        android:id="@+id/lot"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="#AFABAB"
+        app:cornerRadius="0dp"
+        app:iconPadding="0dp"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp"
+        tools:layout_editor_absoluteX="272dp"
+        tools:layout_editor_absoluteY="102dp" />
+
+    <Button
+        android:id="@+id/lot8"
+        android:layout_width="140dp"
+        android:layout_height="56dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="#AFABAB"
+        app:cornerRadius="0dp"
+        app:iconPadding="0dp"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp"
+        tools:layout_editor_absoluteX="272dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <Button
         android:id="@+id/lot3"
         android:layout_width="140dp"
         android:layout_height="70dp"
@@ -202,16 +232,6 @@
         tools:layout_editor_absoluteX="272dp"
         tools:layout_editor_absoluteY="452dp" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="415dp"
-        android:layout_height="63dp"
-        android:background="#2A9D8F"
-        android:text="Basement 1"
-        app:backgroundTint="#2A9D8F"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="0dp" />
-
     <ImageView
         android:id="@+id/mall_pic"
         android:layout_width="75dp"
@@ -227,13 +247,5 @@
         app:srcCompat="@drawable/enter"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="84dp" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="63dp"
-        android:layout_height="88dp"
-        app:srcCompat="@drawable/exit"
-        tools:layout_editor_absoluteX="332dp"
-        tools:layout_editor_absoluteY="72dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
