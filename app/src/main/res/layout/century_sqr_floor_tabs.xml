@@ -6,9 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/century_sqr_b1"
+        android:id="@+id/century_sqr_b1_include"
+        android:visibility="visible"/>
+    <include layout="@layout/century_sqr_b2"
+        android:id="@+id/century_sqr_b2_include"
+        android:visibility="invisible"/>
+
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/tab_layout"
         app:tabIndicatorColor="#2A9D8F"
         app:tabMode="fixed"
         tools:layout_editor_absoluteX="0dp"

@@ -56,10 +56,18 @@ public class MainActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://ezypark-49e23-default-rtdb.asia-southeast1.firebasedatabase.app/");
         DatabaseReference reference = database.getReference();
 
+        TextView carpark_name = (TextView)findViewById(R.id.carpark_name);
         TextView total_lots = (TextView)findViewById(R.id.total_lots);
         TextView available_lots = (TextView)findViewById(R.id.available_lots);
         TextView waiting_cars = (TextView)findViewById(R.id.waiting_cars);
         Button view_carpark = (Button)findViewById(R.id.view_carpark_button);
+
+        view_carpark.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, Carpark.class);
+                startActivity(myIntent);
+            }
+        });
 
         searchCarparks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -114,17 +122,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+                carpark_name.setText(carpark);
+                carpark_name.setVisibility(View.VISIBLE);
                 view_carpark.setVisibility(View.VISIBLE);
             }
         });
-
-        view_carpark.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, Carpark.class);
-                startActivity(myIntent);
-            }
-        });
-
         // referenceAvailableLots.setValue(2);
     }
 
