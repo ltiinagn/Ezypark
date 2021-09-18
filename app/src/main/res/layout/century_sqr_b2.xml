@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/century_sqr_floor_tabs" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/century_sqr_floor_tabs"
+        android:layout_width="411dp"
+        android:layout_height="725dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="6dp" />
 
     <Button
         android:id="@+id/lot5"
@@ -17,10 +22,10 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/lot0"
+        app:layout_constraintTop_toBottomOf="@id/lot4"
         app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="522dp" />
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/lot6"
@@ -31,24 +36,26 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/lot0"
+        app:layout_constraintTop_toBottomOf="@id/lot5"
         app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="592dp" />
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/lot7"
         android:layout_width="140dp"
         android:layout_height="70dp"
+
         android:insetTop="0dp"
         android:insetBottom="0dp"
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toLeftOf="@id/lot0"
+        app:layout_constraintTop_toBottomOf="@id/lot6"
         app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="662dp" />
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/lot14"
@@ -61,8 +68,8 @@
         app:iconPadding="0dp"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="522dp" />
+        app:layout_constraintLeft_toLeftOf="@id/lot9"
+        app:layout_constraintTop_toBottomOf="@id/lot13"/>
 
     <Button
         android:id="@+id/lot15"
@@ -75,22 +82,25 @@
         app:iconPadding="0dp"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="592dp" />
+        app:layout_constraintLeft_toLeftOf="@id/lot9"
+        app:layout_constraintTop_toBottomOf="@id/lot14"/>
 
     <Button
         android:id="@+id/lot9"
         android:layout_width="140dp"
         android:layout_height="70dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="172dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="172dp" />
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/lot16"
@@ -103,8 +113,8 @@
         app:iconPadding="0dp"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="662dp" />
+        app:layout_constraintLeft_toLeftOf="@id/lot9"
+        app:layout_constraintTop_toBottomOf="@id/lot15" />
 
     <Button
         android:id="@+id/lot13"
@@ -117,8 +127,8 @@
         app:iconPadding="0dp"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="452dp" />
+        app:layout_constraintLeft_toLeftOf="@id/lot9"
+        app:layout_constraintTop_toBottomOf="@id/lot12" />
 
     <Button
         android:id="@+id/lot12"
@@ -131,8 +141,8 @@
         app:iconPadding="0dp"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="382dp" />
+        app:layout_constraintLeft_toLeftOf="@id/lot9"
+        app:layout_constraintTop_toBottomOf="@id/lot11" />
 
     <Button
         android:id="@+id/lot11"
@@ -143,10 +153,10 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/lot9"
+        app:layout_constraintTop_toBottomOf="@id/lot10"
         app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="312dp" />
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/lot10"
@@ -157,10 +167,43 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/lot9"
+        app:layout_constraintTop_toBottomOf="@id/lot9"
         app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="242dp" />
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/lot0"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginLeft="272dp"
+        android:layout_marginTop="52dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="#AFABAB"
+        app:cornerRadius="0dp"
+        app:iconPadding="0dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/lot1"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="#AFABAB"
+        app:cornerRadius="0dp"
+        app:iconPadding="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/lot0"
+        app:layout_constraintTop_toBottomOf="@id/lot0"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/lot2"
@@ -171,38 +214,10 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/lot0"
+        app:layout_constraintTop_toBottomOf="@id/lot1"
         app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="172dp" />
-
-    <Button
-        android:id="@+id/lot"
-        android:layout_width="140dp"
-        android:layout_height="70dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        app:backgroundTint="#AFABAB"
-        app:cornerRadius="0dp"
-        app:iconPadding="0dp"
-        app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="102dp" />
-
-    <Button
-        android:id="@+id/lot8"
-        android:layout_width="140dp"
-        android:layout_height="56dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        app:backgroundTint="#AFABAB"
-        app:cornerRadius="0dp"
-        app:iconPadding="0dp"
-        app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="46dp" />
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/lot3"
@@ -213,39 +228,76 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/lot0"
+        app:layout_constraintTop_toBottomOf="@id/lot2"
         app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="242dp" />
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/lot4"
         android:layout_width="140dp"
         android:layout_height="70dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="452dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="#000000"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="452dp" />
+        app:strokeWidth="1dp" />
 
     <ImageView
         android:id="@+id/mall_pic"
         android:layout_width="75dp"
         android:layout_height="82dp"
-        app:srcCompat="@drawable/mall"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="342dp" />
+        android:layout_marginStart="320dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="344dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mall" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="61dp"
         android:layout_height="61dp"
-        app:srcCompat="@drawable/enter"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="84dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="80dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/enter" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="123dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

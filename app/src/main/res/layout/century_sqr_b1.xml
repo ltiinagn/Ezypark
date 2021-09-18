@@ -20,7 +20,7 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot2"
+        app:layout_constraintLeft_toLeftOf="@id/lot0"
         app:layout_constraintTop_toBottomOf="@id/lot4"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
@@ -34,7 +34,7 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot2"
+        app:layout_constraintLeft_toLeftOf="@id/lot0"
         app:layout_constraintTop_toBottomOf="@id/lot5"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
@@ -50,7 +50,7 @@
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
         app:layout_constrainedWidth="true"
-        app:layout_constraintLeft_toLeftOf="@id/lot2"
+        app:layout_constraintLeft_toLeftOf="@id/lot0"
         app:layout_constraintTop_toBottomOf="@id/lot6"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
@@ -171,7 +171,7 @@
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot2"
+        android:id="@+id/lot0"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:layout_marginStart="272dp"
@@ -190,7 +190,7 @@
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot3"
+        android:id="@+id/lot1"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -198,8 +198,8 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot2"
-        app:layout_constraintTop_toBottomOf="@id/lot2"
+        app:layout_constraintLeft_toLeftOf="@id/lot0"
+        app:layout_constraintTop_toBottomOf="@id/lot0"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 
