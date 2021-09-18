@@ -207,7 +207,7 @@
         android:layout_width="415dp"
         android:layout_height="63dp"
         android:background="#2A9D8F"
-        android:text="Basement 1"
+        android:text="Basement 2"
         app:backgroundTint="#2A9D8F"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="0dp" />
