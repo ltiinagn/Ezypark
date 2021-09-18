@@ -7,7 +7,7 @@
     android:background="#fff">
 
     <Button
-        android:id="@+id/lot5"
+        android:id="@+id/CenturySquareB2_lot5"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -15,13 +15,13 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot0"
-        app:layout_constraintTop_toBottomOf="@id/lot4"
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot0"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot4"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot6"
+        android:id="@+id/CenturySquareB2_lot6"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -29,13 +29,13 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot0"
-        app:layout_constraintTop_toBottomOf="@id/lot5"
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot0"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot5"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot7"
+        android:id="@+id/CenturySquareB2_lot7"
         android:layout_width="140dp"
         android:layout_height="70dp"
 
@@ -45,13 +45,13 @@
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
         app:layout_constrainedWidth="true"
-        app:layout_constraintLeft_toLeftOf="@id/lot0"
-        app:layout_constraintTop_toBottomOf="@id/lot6"
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot0"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot6"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot14"
+        android:id="@+id/CenturySquareB2_lot14"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -61,11 +61,11 @@
         app:iconPadding="0dp"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot9"
-        app:layout_constraintTop_toBottomOf="@id/lot13"/>
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot9"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot13"/>
 
     <Button
-        android:id="@+id/lot15"
+        android:id="@+id/CenturySquareB2_lot15"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -75,11 +75,11 @@
         app:iconPadding="0dp"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot9"
-        app:layout_constraintTop_toBottomOf="@id/lot14"/>
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot9"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot14"/>
 
     <Button
-        android:id="@+id/lot9"
+        android:id="@+id/CenturySquareB2_lot9"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:layout_marginStart="0dp"
@@ -96,7 +96,7 @@
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot16"
+        android:id="@+id/CenturySquareB2_lot16"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -106,11 +106,11 @@
         app:iconPadding="0dp"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot9"
-        app:layout_constraintTop_toBottomOf="@id/lot15" />
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot9"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot15" />
 
     <Button
-        android:id="@+id/lot13"
+        android:id="@+id/CenturySquareB2_lot13"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -120,11 +120,11 @@
         app:iconPadding="0dp"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot9"
-        app:layout_constraintTop_toBottomOf="@id/lot12" />
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot9"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot12" />
 
     <Button
-        android:id="@+id/lot12"
+        android:id="@+id/CenturySquareB2_lot12"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -134,11 +134,11 @@
         app:iconPadding="0dp"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot9"
-        app:layout_constraintTop_toBottomOf="@id/lot11" />
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot9"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot11" />
 
     <Button
-        android:id="@+id/lot11"
+        android:id="@+id/CenturySquareB2_lot11"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -146,13 +146,13 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot9"
-        app:layout_constraintTop_toBottomOf="@id/lot10"
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot9"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot10"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot10"
+        android:id="@+id/CenturySquareB2_lot10"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -160,13 +160,13 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot9"
-        app:layout_constraintTop_toBottomOf="@id/lot9"
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot9"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot9"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot0"
+        android:id="@+id/CenturySquareB2_lot0"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:layout_marginTop="52dp"
@@ -183,7 +183,7 @@
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot1"
+        android:id="@+id/CenturySquareB2_lot1"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -191,13 +191,13 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot0"
-        app:layout_constraintTop_toBottomOf="@id/lot0"
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot0"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot0"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot2"
+        android:id="@+id/CenturySquareB2_lot2"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -205,13 +205,13 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot0"
-        app:layout_constraintTop_toBottomOf="@id/lot1"
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot0"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot1"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot3"
+        android:id="@+id/CenturySquareB2_lot3"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:insetTop="0dp"
@@ -219,13 +219,13 @@
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintLeft_toLeftOf="@id/lot0"
-        app:layout_constraintTop_toBottomOf="@id/lot2"
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot0"
+        app:layout_constraintTop_toBottomOf="@id/CenturySquareB2_lot2"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/lot4"
+        android:id="@+id/CenturySquareB2_lot4"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:layout_marginStart="272dp"

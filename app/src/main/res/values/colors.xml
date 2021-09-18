@@ -13,4 +13,6 @@
     <color name="colorAccent">@color/purple_200</color>
 
     <color name="teal">#2A9D8F</color>
+    <color name="occupied">#333333</color>
+    <color name="unoccupied">#AFABAB</color>
 </resources>
