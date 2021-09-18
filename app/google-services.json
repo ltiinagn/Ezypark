@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "305305061092",
+    "project_id": "ezypark-49e23",
+    "storage_bucket": "ezypark-49e23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305305061092:android:0908606cbc8cd952434ef1",
+        "android_client_info": {
+          "package_name": "com.ezypark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305305061092-7c6nbgdo1gskcnmodl59cjc6hhssfn24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbOCnNE70LP_vWYNSQr1TsgNSwFa4ZNCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305305061092-7c6nbgdo1gskcnmodl59cjc6hhssfn24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
