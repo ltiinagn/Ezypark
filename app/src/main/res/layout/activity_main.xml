@@ -69,7 +69,7 @@
                     android:paddingLeft="5dp"
                     android:selectAllOnFocus="true"
                     android:singleLine="true"
-                    android:textSize="14sp" />
+                    android:textSize="18dp" />
 
                 <View
                     android:id="@+id/anchor"
@@ -86,19 +86,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
             android:background="@drawable/layout_bg"
             android:elevation="10dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:visibility="invisible" >
 
             <LinearLayout
                 android:id="@+id/LinearLayout_image"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
@@ -109,8 +109,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/century_square" />
-
-
             </LinearLayout>
 
             <TextView
@@ -120,18 +118,8 @@
                 android:gravity="center"
                 android:text="@string/carpark_name"
                 android:textAlignment="center"
-                android:textSize="24dp"
-                android:visibility="invisible" />
-
-            <TextView
-                android:id="@+id/total_lots"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/total_lots"
-                android:textAlignment="center"
-                android:textSize="20dp"
-                android:visibility="invisible" />
+                android:textColor="@color/black"
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/available_lots"
@@ -140,8 +128,7 @@
                 android:gravity="center"
                 android:text="@string/available_lots"
                 android:textAlignment="center"
-                android:textSize="20dp"
-                android:visibility="invisible" />
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/waiting_cars"
@@ -150,23 +137,49 @@
                 android:gravity="center"
                 android:text="@string/waiting_cars"
                 android:textAlignment="center"
-                android:textSize="20dp"
-                android:visibility="invisible" />
+                android:textSize="18dp" />
 
-            <LinearLayout
-                android:id="@+id/LinearLayout1"
+            <TextView
+                android:id="@+id/basic_rate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@string/basic_rate"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_pred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/layout_bg"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_data"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
                 android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/view_carpark_button"
-                    android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/data"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/view_carpark"
-                    android:visibility="invisible" />
+                    android:src="@drawable/century_square" />
             </LinearLayout>
 
         </LinearLayout>
@@ -179,6 +192,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:foreground="@drawable/parking"
+        app:backgroundTint="#F4A261" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

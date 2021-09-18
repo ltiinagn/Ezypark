@@ -26,6 +26,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.io.FileInputStream;
@@ -56,18 +57,20 @@ public class MainActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://ezypark-49e23-default-rtdb.asia-southeast1.firebasedatabase.app/");
         DatabaseReference reference = database.getReference();
 
+        LinearLayout linearLayout = (LinearLayout)findViewById(R.id.LinearLayout_info);
+
         TextView carpark_name = (TextView)findViewById(R.id.carpark_name);
-        TextView total_lots = (TextView)findViewById(R.id.total_lots);
+        TextView basic_rate = (TextView)findViewById(R.id.basic_rate);
         TextView available_lots = (TextView)findViewById(R.id.available_lots);
         TextView waiting_cars = (TextView)findViewById(R.id.waiting_cars);
-        Button view_carpark = (Button)findViewById(R.id.view_carpark_button);
-
-        view_carpark.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, Carpark.class);
-                startActivity(myIntent);
-            }
-        });
+//        Button view_carpark = (Button)findViewById(R.id.view_carpark_button);
+//
+//        view_carpark.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent myIntent = new Intent(MainActivity.this, Carpark.class);
+//                startActivity(myIntent);
+//            }
+//        });
 
         searchCarparks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -75,17 +78,16 @@ public class MainActivity extends AppCompatActivity {
                 String carpark = searchCarparks.getText().toString();
 
                 DatabaseReference referenceCarpark = reference.child("carparks").child(carpark);
-                DatabaseReference referenceTotalLots = referenceCarpark.child("total_lots");
+                DatabaseReference referenceBasicRate = referenceCarpark.child("basic_rate");
                 DatabaseReference referenceAvailableLots = referenceCarpark.child("available_lots");
                 DatabaseReference referenceWaitingCars = referenceCarpark.child("waiting_cars");
 
                 // Read from the database
-                referenceTotalLots.addValueEventListener(new ValueEventListener() {
+                referenceBasicRate.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        Integer value = dataSnapshot.getValue(Integer.class);
-                        total_lots.setText("Total Lots: "+value);
-                        total_lots.setVisibility(View.VISIBLE);
+                        String value = dataSnapshot.getValue(String.class);
+                        basic_rate.setText("Basic Rate: "+value);
                     }
 
                     @Override
@@ -99,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Integer value = dataSnapshot.getValue(Integer.class);
                         available_lots.setText("Available Lots: "+value);
-                        available_lots.setVisibility(View.VISIBLE);
                     }
 
                     @Override
@@ -113,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Integer value = dataSnapshot.getValue(Integer.class);
                         waiting_cars.setText("Waiting Cars: "+value);
-                        waiting_cars.setVisibility(View.VISIBLE);
                     }
 
                     @Override
@@ -123,8 +123,8 @@ public class MainActivity extends AppCompatActivity {
                 });
 
                 carpark_name.setText(carpark);
-                carpark_name.setVisibility(View.VISIBLE);
-                view_carpark.setVisibility(View.VISIBLE);
+
+                linearLayout.setVisibility(View.VISIBLE);
             }
         });
         // referenceAvailableLots.setValue(2);

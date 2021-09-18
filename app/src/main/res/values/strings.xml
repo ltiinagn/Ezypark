@@ -9,7 +9,7 @@
 
     <string name="search_hint">Search for Carpark..</string>
     <string name="carpark_name">Century Square</string>
-    <string name="total_lots">Total Lots: -1</string>
+    <string name="basic_rate">Basic Rate: $3/hr</string>
     <string name="available_lots">Available Lots: -1</string>
     <string name="waiting_cars">Waiting Cars: -1</string>
     <string name="view_carpark">View Carpark</string>
