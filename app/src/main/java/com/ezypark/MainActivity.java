@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://ezypark-49e23-default-rtdb.asia-southeast1.firebasedatabase.app/");
         DatabaseReference reference = database.getReference();
-        DatabaseReference referenceAvailableLots = reference.child("available_lots");
+        DatabaseReference referenceAvailableLots = reference.child("carparks").child("Century Square").child("available_lots");
 
         // referenceAvailableLots.setValue(2);
 
