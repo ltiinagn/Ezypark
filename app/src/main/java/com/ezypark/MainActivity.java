@@ -21,6 +21,7 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import java.io.FileInputStream;
 
@@ -42,12 +43,15 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
+
+        TextView available_lots = (TextView)findViewById(R.id.available_lots);
+
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://ezypark-49e23-default-rtdb.asia-southeast1.firebasedatabase.app/");
         DatabaseReference reference = database.getReference();
         DatabaseReference referenceAvailableLots = reference.child("available_lots");
 
-        referenceAvailableLots.setValue(2);
+        // referenceAvailableLots.setValue(2);
 
         // Read from the database
         referenceAvailableLots.addValueEventListener(new ValueEventListener() {
@@ -57,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 Integer value = dataSnapshot.getValue(Integer.class);
                 Log.d("Test", "Value is: " + value);
+                available_lots.setText("Available Lots: "+value);
             }
 
             @Override
