@@ -189,7 +189,7 @@
             android:elevation="10dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="5dp"
+            android:padding="15dp"
             android:visibility="invisible"
             >
 
@@ -206,7 +206,7 @@
             <LinearLayout
                 android:id="@+id/LinearLayout_data"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
@@ -228,16 +228,21 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="TextView"
-                        android:textSize="18sp" />
+                        android:text="7AM"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/textView_d1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
                         android:layout_weight="2"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="100%"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -254,16 +259,21 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="TextView"
-                        android:textSize="18sp" />
+                        android:text="7AM"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/textView_d2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
                         android:layout_weight="2"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="100%"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -280,16 +290,21 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="TextView"
-                        android:textSize="18sp" />
+                        android:text="7AM"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/textView_d3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
                         android:layout_weight="2"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="100%"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
                 </LinearLayout>
             </LinearLayout>
 
