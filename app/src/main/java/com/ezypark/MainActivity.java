@@ -119,6 +119,77 @@ public class MainActivity extends AppCompatActivity {
                 information.setVisibility(View.VISIBLE);
                 linearLayout.setVisibility(View.VISIBLE);
                 view_carpark.setVisibility(View.VISIBLE);
+
+                DatabaseReference referencePredData = referenceCarpark.child("pred_data").child("Sun");
+
+                referencePredData.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        String value = dataSnapshot.getValue(String.class);
+                        value = value.substring(2, value.length()-2);
+                        String[] valueArray = value.split("\\),\\(");
+
+                        LinearLayout LinearLayout_pred = (LinearLayout)findViewById(R.id.LinearLayout_pred);
+                        TextView[] textView_t = new TextView[] {(TextView)findViewById(R.id.textView_t1), (TextView)findViewById(R.id.textView_t2), (TextView)findViewById(R.id.textView_t3)};
+                        TextView[] textView_d = new TextView[] {(TextView)findViewById(R.id.textView_d1), (TextView)findViewById(R.id.textView_d2), (TextView)findViewById(R.id.textView_d3)};
+
+                        int currentTime = 1500;
+                        int roundedCurrentTime = currentTime/100*100;
+                        int count = 0;
+
+                        for (String data : valueArray) {
+                            String[] dataArray = data.split(",");
+                            int time = Integer.valueOf(dataArray[0]);
+                            if (time >= roundedCurrentTime) {
+                                textView_t[count].setText(dataArray[0]);
+                                textView_d[count].setText(dataArray[1]);
+                                count += 1;
+                            }
+                            if (count == 3) {
+                                break;
+                            }
+                        }
+                        LinearLayout_pred.setVisibility(View.VISIBLE);
+//                        if (count < 3) {
+//                            DatabaseReference referencePredData = referenceCarpark.child("pred_data").child("Mon");
+//
+//                            referencePredData.addValueEventListener(new ValueEventListener() {
+//                                @Override
+//                                public void onDataChange(DataSnapshot dataSnapshot) {
+//                                    String value = dataSnapshot.getValue(String.class);
+//                                    value = value.substring(2, value.length()-2);
+//                                    String[] valueArray = value.split("\\),\\(");
+//
+//                                    for (String data : valueArray) {
+//                                        String[] dataArray = data.split(",");
+//                                        int time = Integer.valueOf(dataArray[0]);
+//                                        if (time >= roundedCurrentTime) {
+//                                            textView_t[count].setText(dataArray[0]);
+//                                            textView_d[count].setText(dataArray[1]);
+//                                            count += 1
+//                                        }
+//                                        if (count == 3) {
+//                                            break;
+//                                        }
+//                                    }
+//                                    if (count < 3) {
+//                                        DatabaseReference referencePredData = referenceCarpark.child("pred_data").child("Sun");
+//                                    }
+//                                }
+//
+//                                @Override
+//                                public void onCancelled(DatabaseError error) {
+//                                    Log.w("Test", "Failed to read value.", error.toException());
+//                                }
+//                            });
+//                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+                        Log.w("Test", "Failed to read value.", error.toException());
+                    }
+                });
             }
         });
         // referenceAvailableLots.setValue(2);
