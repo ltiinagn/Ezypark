@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
                 DatabaseReference referenceCarpark = reference.child("carparks").child(carpark);
                 DatabaseReference referenceBasicRate = referenceCarpark.child("basic_rate");
-                DatabaseReference referenceAvailableLots = referenceCarpark.child("available_lots");
+                DatabaseReference referenceAvailableLots = referenceCarpark.child("total_avail_lots");
                 DatabaseReference referenceWaitingCars = referenceCarpark.child("waiting_cars");
 
                 // Read from the database
