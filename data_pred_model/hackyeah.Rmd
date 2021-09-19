@@ -1,0 +1,64 @@
+---
+title: "hack yeah"
+output: html_document
+---
+```{r}
+library(tidyr)
+library(httr)
+library(jsonlite)
+library(magrittr) # needs to be run every time you start R and want to use %>%
+library(dplyr)
+```
+```{r}
+T17 <- data.frame(matrix(ncol = 2, nrow = 0))
+
+```
+
+```{r}
+res = GET(paste0("https://api.data.gov.sg/v1/transport/carpark-availability?date_time=2021-09-01T22%3A00%3A00"))
+      rawToChar(res$content)
+      data = fromJSON(rawToChar(res$content))
+      names(data)
+      a = data$items$carpark_data
+      a
+      b = a[[1]]
+      b$carpark_info
+      c = filter(b, carpark_number == "HE12")
+      c$carpark_info
+      c1 = c$update_datetime
+      d = c$carpark_info
+      d
+      e = as.numeric(d[[1]][3])
+      T17_2021 <- rbind(T17_2021,c(c1,e))
+      T17_2021
+```
+```{r}
+day_31 <- formatC(seq(29,31, by = 1), width = 2, flag = 0)
+hour <- formatC(seq(7, 22, by = 1), width = 2, flag = 0)
+for (i in day_31){
+  for (k in hour){
+      res = GET(paste0("https://api.data.gov.sg/v1/transport/carpark-availability?date_time=2021-08-",i,"T",k, "%3A00%3A00"))
+      rawToChar(res$content)
+      data = fromJSON(rawToChar(res$content))
+      names(data)
+      a = data$items$carpark_data
+      b = a[[1]]
+      c = filter(b, carpark_number == "HE12")
+      c$update_datetime
+      c1 = c$update_datetime
+      d = c$carpark_info
+      e = as.numeric(d[[1]][3])
+      T17_2021 <- rbind(T17_2021,c(c1,e))
+      T17_2021
+      }
+    }
+print(T17_2021)
+names(T17_2021)[1] <- 'date_time'
+names(T17_2021)[2] <- 'available_lots'
+T17_2021
+```
+```{r}
+write.csv(T17_2021[c("date_time", "available_lots")], "hackyeahv3.csv", row.names = FALSE)
+```
+
+
