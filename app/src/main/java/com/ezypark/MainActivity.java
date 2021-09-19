@@ -63,14 +63,14 @@ public class MainActivity extends AppCompatActivity {
         TextView basic_rate = (TextView)findViewById(R.id.basic_rate);
         TextView available_lots = (TextView)findViewById(R.id.available_lots);
         TextView waiting_cars = (TextView)findViewById(R.id.waiting_cars);
-//        Button view_carpark = (Button)findViewById(R.id.view_carpark_button);
-//
-//        view_carpark.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent myIntent = new Intent(MainActivity.this, Carpark.class);
-//                startActivity(myIntent);
-//            }
-//        });
+        FloatingActionButton view_carpark = (FloatingActionButton) findViewById(R.id.view_carpark_button);
+
+        view_carpark.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, Carpark.class);
+                startActivity(myIntent);
+            }
+        });
 
         searchCarparks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

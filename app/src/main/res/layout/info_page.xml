@@ -69,7 +69,8 @@
                     android:paddingLeft="5dp"
                     android:selectAllOnFocus="true"
                     android:singleLine="true"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:textColor="@color/grey" />
 
                 <View
                     android:id="@+id/anchor"
@@ -109,8 +110,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/century_square" />
-
-
             </LinearLayout>
 
             <TextView
@@ -121,6 +120,7 @@
                 android:text="@string/carpark_name"
                 android:textAlignment="center"
                 android:textSize="24dp"
+                android:textColor="@color/black"
                 android:visibility="invisible" />
 
 
@@ -132,6 +132,7 @@
                 android:text="@string/available_lots"
                 android:textAlignment="center"
                 android:textSize="20dp"
+                android:textColor="@color/black"
                 android:visibility="invisible" />
 
             <TextView
@@ -142,6 +143,7 @@
                 android:text="@string/waiting_cars"
                 android:textAlignment="center"
                 android:textSize="20dp"
+                android:textColor="@color/black"
                 android:visibility="invisible" />
 
             <LinearLayout
@@ -150,26 +152,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/view_carpark_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/view_carpark"
-                    android:visibility="invisible" />
             </LinearLayout>
-
         </LinearLayout>
-
     </LinearLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
