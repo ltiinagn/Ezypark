@@ -10,7 +10,7 @@
         android:id="@+id/linearLayout_main"
         android:layout_width="match_parent"
         android:layout_height="787dp"
-        android:background="#ECFAF8"
+        android:background="@color/teal"
         android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
