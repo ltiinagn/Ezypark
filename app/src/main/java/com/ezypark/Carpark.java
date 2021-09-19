@@ -33,10 +33,10 @@ public class Carpark extends AppCompatActivity {
         View centurySquareB1Include = findViewById(R.id.century_sqr_b1_include);
         View centurySquareB2Include = findViewById(R.id.century_sqr_b2_include);
 
-        int[] centurySquareB1LotIDs = new int[] { R.id.CenturySquareB1_lot9, R.id.CenturySquareB1_lot10, R.id.CenturySquareB1_lot11, R.id.CenturySquareB1_lot0, R.id.CenturySquareB1_lot1 };
-        String[] centurySquareB1LotNames = new String[] {"lot9", "lot10", "lot11", "lot0", "lot1"};
-        int[] centurySquareB2LotIDs = new int[] { R.id.CenturySquareB2_lot9, R.id.CenturySquareB2_lot10, R.id.CenturySquareB2_lot11, R.id.CenturySquareB2_lot0, R.id.CenturySquareB2_lot1 };
-        String[] centurySquareB2LotNames = new String[] {"lot9", "lot10", "lot11", "lot0", "lot1"};
+        int[] centurySquareB1LotIDs = new int[] {R.id.CenturySquareB1_lot11,R.id.CenturySquareB1_lot1 };
+        String[] centurySquareB1LotNames = new String[] {"lot2", "lot1"};
+        int[] centurySquareB2LotIDs = new int[] { R.id.CenturySquareB2_lot6, R.id.CenturySquareB2_lot10, R.id.CenturySquareB2_lot0};
+        String[] centurySquareB2LotNames = new String[] {"lot3", "lot4", "lot5"};
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://ezypark-49e23-default-rtdb.asia-southeast1.firebasedatabase.app/");
         DatabaseReference reference = database.getReference();
