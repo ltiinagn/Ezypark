@@ -141,7 +141,15 @@ public class MainActivity extends AppCompatActivity {
                             String[] dataArray = data.split(",");
                             int time = Integer.valueOf(dataArray[0]);
                             if (time >= roundedCurrentTime) {
-                                textView_t[count].setText(dataArray[0]);
+                                String time12Hour = "";
+                                if (time >= 1300) {
+                                    time12Hour = String.valueOf((time - 1200)/100) + ":" + dataArray[0].substring(2) +"PM";
+                                }
+                                else if (time < 1300) {
+                                    time12Hour = String.valueOf(time/100) + ":" + dataArray[0].substring(2) +"AM";
+                                }
+                                Log.d("Test", time12Hour);
+                                textView_t[count].setText(time12Hour);
                                 textView_d[count].setText(dataArray[1].substring(2)+"%");
                                 count += 1;
                             }
