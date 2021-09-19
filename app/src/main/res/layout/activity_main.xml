@@ -189,13 +189,24 @@
             android:elevation="10dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp"
-            android:visibility="invisible">
+            android:padding="15dp"
+            android:visibility="invisible"
+            >
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Carpark Availability in Next 3 Hours"
+                android:textAlignment="center"
+                android:textSize="14sp" />
 
             <LinearLayout
                 android:id="@+id/LinearLayout_data"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
@@ -215,17 +226,23 @@
                         android:id="@+id/textView_t1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
                         android:layout_weight="1"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="7AM"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/textView_d1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
                         android:layout_weight="2"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="100%"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -240,17 +257,23 @@
                         android:id="@+id/textView_t2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
                         android:layout_weight="1"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="7AM"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/textView_d2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
                         android:layout_weight="2"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="100%"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -265,17 +288,23 @@
                         android:id="@+id/textView_t3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
                         android:layout_weight="1"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="7AM"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/textView_d3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
                         android:layout_weight="2"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="100%"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
                 </LinearLayout>
             </LinearLayout>
 
