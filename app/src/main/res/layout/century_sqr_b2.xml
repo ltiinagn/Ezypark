@@ -198,17 +198,18 @@
         android:id="@+id/CenturySquareB2_lot4"
         android:layout_width="140dp"
         android:layout_height="70dp"
-        android:layout_marginStart="272dp"
-        android:layout_marginLeft="144dp"
         android:layout_marginTop="452dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         app:backgroundTint="#AFABAB"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="#000000"
+        app:layout_constraintLeft_toLeftOf="@id/CenturySquareB2_lot0"
         app:strokeWidth="1dp" />
 
     <ImageView
