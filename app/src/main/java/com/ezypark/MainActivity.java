@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                             int time = Integer.valueOf(dataArray[0]);
                             if (time >= roundedCurrentTime) {
                                 textView_t[count].setText(dataArray[0]);
-                                textView_d[count].setText(dataArray[1]);
+                                textView_d[count].setText(dataArray[1].substring(2)+"%");
                                 count += 1;
                             }
                             if (count == 3) {
