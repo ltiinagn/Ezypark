@@ -173,64 +173,83 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
 
                 <LinearLayout
                     android:id="@+id/LinearLayout_t1"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:weightSum="3">
 
                     <TextView
                         android:id="@+id/textView_t1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text="TextView"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
 
                     <TextView
                         android:id="@+id/textView_d1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text="TextView"
+                        android:layout_weight="2"
+                        android:gravity="center"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/LinearLayout_t2"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:weightSum="3">
 
                     <TextView
                         android:id="@+id/textView_t2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text="TextView"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
 
                     <TextView
                         android:id="@+id/textView_d2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text="TextView"
+                        android:layout_weight="2"
+                        android:gravity="center"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/LinearLayout_t3"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:weightSum="3">
 
                     <TextView
                         android:id="@+id/textView_t3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text="TextView"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
 
                     <TextView
                         android:id="@+id/textView_d3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text="TextView"
+                        android:layout_weight="2"
+                        android:gravity="center"/>
                 </LinearLayout>
             </LinearLayout>
 
