@@ -40,15 +40,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
         AppCompatAutoCompleteTextView searchCarparks = (AppCompatAutoCompleteTextView) findViewById(R.id.autocomplete);
         String[] carparks = getResources().getStringArray(R.array.carparks);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, carparks);
@@ -125,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 carpark_name.setText(carpark);
 
                 linearLayout.setVisibility(View.VISIBLE);
+                view_carpark.setVisibility(View.VISIBLE);
             }
         });
         // referenceAvailableLots.setValue(2);

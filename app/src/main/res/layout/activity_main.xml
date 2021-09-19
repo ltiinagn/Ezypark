@@ -193,6 +193,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:foreground="@drawable/parking"
-        app:backgroundTint="#F4A261" />
+        app:backgroundTint="#F4A261"
+        android:visibility="invisible" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
